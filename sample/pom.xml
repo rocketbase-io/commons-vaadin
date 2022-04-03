@@ -13,28 +13,29 @@
 
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
+        <commons-auth.version>4.3.1</commons-auth.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.rocketbase.commons</groupId>
-            <artifactId>commons-vaadin-auth</artifactId>
+            <artifactId>commons-vaadin-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rocketbase.commons</groupId>
             <artifactId>commons-auth-jpa</artifactId>
-            <version>LATEST-SNAPSHOT</version>
+            <version>${commons-auth.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rocketbase.commons</groupId>
             <artifactId>commons-auth-forms</artifactId>
-            <version>LATEST-SNAPSHOT</version>
+            <version>${commons-auth.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rocketbase.commons</groupId>
             <artifactId>commons-auth-server</artifactId>
-            <version>LATEST-SNAPSHOT</version>
+            <version>${commons-auth.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rocketbase.commons</groupId>

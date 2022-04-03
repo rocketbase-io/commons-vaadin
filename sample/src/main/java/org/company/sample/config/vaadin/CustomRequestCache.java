@@ -1,13 +1,10 @@
-package io.rocketbase.commons.vaadin.security;
+package org.company.sample.config.vaadin;
 
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * HttpSessionRequestCache that avoids saving internal framework requests.
- */
 class CustomRequestCache extends HttpSessionRequestCache {
     /**
      * {@inheritDoc}

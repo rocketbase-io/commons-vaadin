@@ -12,6 +12,10 @@
 
     <artifactId>commons-vaadin-auth</artifactId>
 
+    <properties>
+        <commons-auth.version>4.3.1</commons-auth.version>
+    </properties>
+
     <repositories>
         <repository>
             <id>vaadin-addons</id>
@@ -29,7 +33,13 @@
         <dependency>
             <groupId>io.rocketbase.commons</groupId>
             <artifactId>commons-auth-api</artifactId>
-            <version>LATEST-SNAPSHOT</version>
+            <version>${commons-auth.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vaadin.componentfactory</groupId>
+            <artifactId>multi-combo-box-flow</artifactId>
+            <version>2.0.0</version>
         </dependency>
 
         <dependency>
@@ -53,12 +63,16 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.0</version>
+                <configuration>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <version>${vaadin.version}</version>
-                <configuration>
-                    <compatibilityMode>false</compatibilityMode>
-                </configuration>
             </plugin>
         </plugins>
     </build>

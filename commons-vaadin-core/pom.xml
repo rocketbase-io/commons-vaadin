@@ -19,16 +19,12 @@
         </repository>
     </repositories>
 
-    <properties>
-        <maven.deploy.skip>true</maven.deploy.skip>
-
-        <vaadin-spring.version>12.4.0</vaadin-spring.version>
-        <spring-data-provider.version>2.1.0</spring-data-provider.version>
-        <multi-combo-box-flow.version>0.4.0</multi-combo-box-flow.version>
-        <flow-viritin.version>0.5.2</flow-viritin.version>
-    </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>io.rocketbase.commons</groupId>
+            <artifactId>commons-rest-api</artifactId>
+            <version>${commons-rest.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin</artifactId>
@@ -36,25 +32,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-spring</artifactId>
-            <version>${vaadin-spring.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.vaadin.artur</groupId>
-            <artifactId>spring-data-provider</artifactId>
-            <version>${spring-data-provider.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin.componentfactory</groupId>
-            <artifactId>multi-combo-box-flow</artifactId>
-            <version>${multi-combo-box-flow.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.vaadin</groupId>
-            <artifactId>flow-viritin</artifactId>
-            <version>${flow-viritin.version}</version>
+            <groupId>in.virit</groupId>
+            <artifactId>viritin</artifactId>
+            <version>${viritin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -75,9 +55,6 @@
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <version>${vaadin.version}</version>
-                <configuration>
-                    <compatibilityMode>false</compatibilityMode>
-                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -1,4 +1,4 @@
-package io.rocketbase.commons.vaadin.security;
+package org.company.sample.config.vaadin;
 
 import lombok.SneakyThrows;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -13,10 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-/**
- * SecurityUtils takes care of all such static operations that have to do with
- * security and querying rights from different beans of the UI.
- */
 public final class SecurityUtils {
 
     private SecurityUtils() {

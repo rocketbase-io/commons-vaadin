@@ -12,11 +12,9 @@ import io.rocketbase.commons.security.JwtTokenService;
 import io.rocketbase.commons.security.LoginAuthenticationProvider;
 import io.rocketbase.commons.security.TokenAuthenticationProvider;
 import io.rocketbase.commons.service.JwtTokenStoreProvider;
-import io.rocketbase.commons.service.token.AuthorizationCodeService;
-import io.rocketbase.commons.service.user.AppUserTokenService;
 import io.rocketbase.commons.util.JwtTokenStoreService;
-import io.rocketbase.commons.vaadin.security.SecurityUtils;
 import lombok.RequiredArgsConstructor;
+import org.company.sample.config.vaadin.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -60,18 +58,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
     @Resource
     private JwtTokenService jwtTokenService;
 
-    @Resource
-    private AppUserTokenService appUserTokenService;
-
-    @Resource
-    private AuthorizationCodeService authorizationCodeService;
 
     @Autowired(required = false)
     private CustomAuthoritiesProvider customAuthoritiesProvider;
 
     @Bean
     public JwtTokenStoreProvider jwtTokenStoreProvider() {
-        return jwtTokenBundle -> new JwtTokenStoreService(jwtTokenBundle, jwtTokenService, appUserTokenService);
+        return jwtTokenBundle -> new JwtTokenStoreService(jwtTokenBundle, jwtTokenService);
     }
 
     @Bean
@@ -123,7 +116,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
                 .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/app")
-                .successHandler(new LoginSuccessCookieHandler(authorizationCodeService))
+                .successHandler(new LoginSuccessCookieHandler())
                 .permitAll()
                 .and()
                 // logout

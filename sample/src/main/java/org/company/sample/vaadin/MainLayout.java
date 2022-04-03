@@ -15,7 +15,6 @@ import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
 import org.company.sample.vaadin.view.HomeView;
-import org.company.sample.vaadin.view.UserView;
 
 import java.util.Optional;
 
@@ -82,7 +81,6 @@ public class MainLayout extends AppLayout {
     private Component[] createMenuItems() {
         return new Tab[]{
                 createTab("Home", HomeView.class),
-                createTab("User", UserView.class),
         };
     }
 

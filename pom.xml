@@ -93,11 +93,13 @@ SOFTWARE.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <spring-boot.version>2.5.6</spring-boot.version>
+        <spring-boot.version>2.6.5</spring-boot.version>
         <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
-        <commons-rest.version>2.2.4</commons-rest.version>
+        <commons-rest.version>2.3.0</commons-rest.version>
         <jacoco.version>0.8.7</jacoco.version>
-        <vaadin.version>14.7.3</vaadin.version>
+        <vaadin.version>23.0.3</vaadin.version>
+        <commons-rest.version>2.3.0</commons-rest.version>
+        <viritin.version>1.3.0</viritin.version>
 
         <!-- lombok -->
         <lombok.version>1.18.22</lombok.version>
@@ -212,7 +214,7 @@ SOFTWARE.
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>3.2.0</version>
+                        <version>3.2.1</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -225,7 +227,7 @@ SOFTWARE.
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.3.1</version>
+                        <version>3.3.2</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
