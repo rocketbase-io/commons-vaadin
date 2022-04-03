@@ -2,7 +2,7 @@
 <!--
 MIT License
 
-Copyright (c) 2018 rocketbase.io software productions GmbH
+Copyright (c) 2022 rocketbase.io software productions GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,10 +33,10 @@ SOFTWARE.
     <version>LATEST-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>rocketbase.io commons AUTH</name>
-    <description>holds commons classes and services used to develop REST applications with spring mvc</description>
-    <url>https://github.com/rocketbase-io/commons-auth/</url>
-    <inceptionYear>2021</inceptionYear>
+    <name>rocketbase.io commons vaadin</name>
+    <description>different util and common components for vaadin lts version</description>
+    <url>https://github.com/rocketbase-io/commons-vaadin/</url>
+    <inceptionYear>2022</inceptionYear>
 
     <modules>
         <module>commons-vaadin-core</module>

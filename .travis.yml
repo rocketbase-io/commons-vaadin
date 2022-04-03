@@ -1,0 +1,22 @@
+sudo: true
+language: java
+jdk:
+  - openjdk11
+## gpg stuff
+before_install:
+  - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
+  - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
+
+## default build
+script: mvn --settings .travis/settings.xml -U clean install
+## release on tag
+deploy:
+  - provider: script
+    script: ".travis/deploy.sh"
+    skip_cleanup: true
+    on:
+      tags: true
+
+## disable emailing
+#notifications:
+#  email: false
