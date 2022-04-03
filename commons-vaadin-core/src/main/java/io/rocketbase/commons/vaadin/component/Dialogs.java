@@ -24,7 +24,7 @@ public abstract class Dialogs {
 
     public static VDialog openConfirmDelete(Runnable onDelete) {
         UI ui = UI.getCurrent();
-        return openConfirmDelete(ui.getTranslation("user.buttonDelete"), ui.getTranslation("user.buttonCancel"), ui.getTranslation("user.deleteDataset"), ui.getTranslation("user.areYouSure"), onDelete);
+        return openConfirmDelete(ui.getTranslation("buttonDelete"), ui.getTranslation("buttonCancel"), ui.getTranslation("deleteDataset"), ui.getTranslation("areYouSure"), onDelete);
     }
 
     public static VDialog openConfirmDelete(String yes, String no, @Nullable String headline, @Nullable String question, Runnable onDelete) {
@@ -57,7 +57,7 @@ public abstract class Dialogs {
             dialog.close();
         }).withFullWidth().withThemeVariants(ButtonVariant.LUMO_PRIMARY));
 
-        buttonBar.addButton(new VButton(UI.getCurrent().getTranslation("user.buttonCancel"), e -> dialog.close())
+        buttonBar.addButton(new VButton(UI.getCurrent().getTranslation("buttonCancel"), e -> dialog.close())
                 .withFullWidth().withThemeVariants(ButtonVariant.LUMO_TERTIARY));
 
 
@@ -87,12 +87,12 @@ public abstract class Dialogs {
 
     public static VDialog createComplexDialog(@Nullable String headline, Component content,
                                               Consumer<VDialog> onClick) {
-        return createComplexDialog(headline, content, null, new VButton(UI.getCurrent().getTranslation("user.buttonCancel")), onClick);
+        return createComplexDialog(headline, content, null, new VButton(UI.getCurrent().getTranslation("buttonCancel")), onClick);
     }
 
     public static VDialog createComplexDialog(@Nullable String headline, Component content, Button button,
                                               Consumer<VDialog> onClick) {
-        return createComplexDialog(headline, content, button, new VButton(UI.getCurrent().getTranslation("user.buttonCancel")), onClick);
+        return createComplexDialog(headline, content, button, new VButton(UI.getCurrent().getTranslation("buttonCancel")), onClick);
     }
 
     /**
@@ -122,7 +122,7 @@ public abstract class Dialogs {
     }
 
     public static VDialog pleaseWait() {
-        return pleaseWait(UI.getCurrent().getTranslation("user.pleaseWait"));
+        return pleaseWait(UI.getCurrent().getTranslation("pleaseWait"));
     }
 
     public static VDialog pleaseWait(String label) {
